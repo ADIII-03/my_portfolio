@@ -68,7 +68,7 @@ export function ContactSection() {
             <span className="neon-glow text-primary">Get In Touch</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to create something amazing together? Let's discuss your next project.
+            Ready to create something amazing together? Let&apos;s discuss your next project.
           </p>
         </div>
 
@@ -173,7 +173,7 @@ export function ContactSection() {
 
                   {submitStatus === "success" && (
                     <div className="text-green-400 text-center p-3 bg-green-400/10 rounded-lg border border-green-400/20">
-                      Message sent successfully! I'll get back to you soon.
+                      Message sent successfully! I&apos;ll get back to you soon.
                     </div>
                   )}
 

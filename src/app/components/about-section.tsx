@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Link from "next/link"
+
 
 export default function HomePage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -122,7 +122,7 @@ export default function HomePage() {
                     </h3>
                   </div>
                   <p className="text-muted-foreground leading-relaxed text-lg group-hover:text-foreground/90 transition-colors duration-300">
-                    I'm a Full Stack Developer passionate about building interactive web applications and creating
+                    I&apos;m a Full Stack Developer passionate about building interactive web applications and creating
                     seamless user experiences. I believe in crafting digital experiences that tell stories, inspired by
                     the visual aesthetics of cinema to create interfaces that are both functional and emotionally
                     engaging.

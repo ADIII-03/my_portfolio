@@ -32,7 +32,7 @@ export function CinematicIntro({ onComplete }: CinematicIntroProps) {
   // Run phases
   useEffect(() => {
     const phases = [
-      { duration: 2000, phase: 1 }, // Matrix rain + company intro
+      { duration: 2000, phase: 1 }, // Matrix rain + compunknown intro
       { duration: 3000, phase: 2 }, // Name typewriter
       { duration: 2000, phase: 3 }, // Title reveal
       { duration: 2000, phase: 4 }, // Glitch effect

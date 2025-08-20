@@ -166,7 +166,7 @@ export function HeroSection() {
 
      <p className="text-xl md:text-3xl text-muted-foreground mt-6 max-w-4xl leading-relaxed fade-in-up">
   I’m a <span className="text-secondary font-semibold">full stack developer</span> learning and growing day by day,
-  week by week. I’m also a <span className="text-primary font-semibold">problem solver</span> with a keen interest in
+  week by week. I&apos also a <span className="text-primary font-semibold">problem solver</span> with a keen interest in
   competitive programming, and I love to challenge myself.
 </p>
 
@@ -190,7 +190,7 @@ export function HeroSection() {
           </a>
         </div>
 
-        <div className="flex gap-6 mt-12 fade-in-up">
+       <div className="flex gap-6 mt-12 fade-in-up">
           <a
             href="https://github.com/ADIII-03"
             className="p-3 rounded-full border border-muted-foreground/30 hover:border-primary hover:bg-primary/10 transition-all duration-300 group"
