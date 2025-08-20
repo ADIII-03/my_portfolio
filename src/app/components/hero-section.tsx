@@ -166,7 +166,7 @@ export function HeroSection() {
 
      <p className="text-xl md:text-3xl text-muted-foreground mt-6 max-w-4xl leading-relaxed fade-in-up">
   I’m a <span className="text-secondary font-semibold">full stack developer</span> learning and growing day by day,
-  week by week. I&apos also a <span className="text-primary font-semibold">problem solver</span> with a keen interest in
+  week by week.  I&apos;m{" "} also a <span className="text-primary font-semibold">problem solver</span> with a keen interest in
   competitive programming, and I love to challenge myself.
 </p>
 
