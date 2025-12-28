@@ -6,6 +6,18 @@ import { useState, useEffect } from "react"
 export default function HomePage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
+  const [stats, setStats] = useState<any>(null)
+
+useEffect(() => {
+  fetch("/api/stats")
+    .then(res => res.json())
+    .then(setStats)
+}, [])
+
+const leetcode = stats?.leetcode
+const codeforces = stats?.codeforces
+const codechef = stats?.codechef
+const gfg = stats?.geeksforgeeks
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -33,11 +45,11 @@ export default function HomePage() {
       platform: "LeetCode",
       username: "adi03__",
       stats: {
-        solved: "200+",
-        easy: "70",
-        medium: "81",
-        hard: "7",
-        ranking: "Top 20%",
+          solved: leetcode?.totalSolved,
+    easy: leetcode?.easySolved,
+    medium: leetcode?.mediumSolved,
+    hard: leetcode?.hardSolved,
+        ranking: "Top 2%",
         streak: "20 days",
       },
       color: "from-orange-500 to-yellow-500",
@@ -50,9 +62,9 @@ export default function HomePage() {
       stats: {
         rating: "1300+",
         stars: "1★",
-        contests: "3",
+        contests: "8",
         rank: "newbie",
-        maxRating: "1307",
+        maxRating: "1407",
         globalRank: "55000+",
       },
       color: "from-amber-600 to-orange-600",
@@ -63,11 +75,11 @@ export default function HomePage() {
       platform: "Codeforces",
       username: "Aditya0318",
       stats: {
-        rating: "353",
-        rank: "newbie",
-        contests: "1",
-        maxRating: "353",
-        problems: "3",
+        rating:  codeforces?.rating,
+        rank: codeforces?.rank,
+        contests: "3",
+        maxRating:  codeforces?.maxRating,
+        problems: "70+",
         contribution: "+0",
       },
       color: "from-blue-600 to-purple-600",

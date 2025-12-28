@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Mail, MapPin, Phone, GraduationCap, Github, Linkedin, Twitter } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 interface ContactFormData {
   name: string
@@ -28,32 +29,45 @@ export function ContactSection() {
     },
   })
 
-  const onSubmit = async (data: ContactFormData) => {
-    setIsSubmitting(true)
-    setSubmitStatus("idle")
+const onSubmit = async (data: ContactFormData) => {
+  setIsSubmitting(true)
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
+  try {
+    // 1️⃣ Send email to YOU
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      {
+        to_email: "aradityaraman0518@gmail.com",
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    )
 
-      if (response.ok) {
-        setSubmitStatus("success")
-        form.reset()
-      } else {
-        setSubmitStatus("error")
-      }
-    } catch (error) {
-      console.error("Error sending email:", error)
-      setSubmitStatus("error")
-    } finally {
-      setIsSubmitting(false)
-    }
+    // 2️⃣ Send auto-reply to USER
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      {
+        to_email: data.email,
+        from_name: data.name,
+        message: data.message,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    )
+
+    setSubmitStatus("success")
+    form.reset()
+  } catch (error) {
+    console.error(error)
+    setSubmitStatus("error")
+  } finally {
+    setIsSubmitting(false)
   }
+}
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
