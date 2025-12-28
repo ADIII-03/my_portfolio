@@ -42,10 +42,10 @@ const projects = [
   description:
     "A smart oceanographic data collection system using Argo float technology to monitor temperature, salinity, and ocean currents in real time, aiding climate research and marine analysis.",
   image: "/argo-float.webp", 
-  tech: ["IoT", "Python", "Node.js", "MongoDB", "React", "Cloud"],
+  tech: ["RAG", "Nextjs", "Postgres", "Docker", "GOOGLE cloud", "Cesium" ,"Mapbox" ,"Plotly" , "python"],
   liveUrl: "https://sih-project-omega.vercel.app/", // optional
   githubUrl: "https://github.com/ADIII-03/sihProject", // if public
-  featured: true, // optional
+  featured: true, 
 }
 
 ]

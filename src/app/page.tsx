@@ -8,6 +8,8 @@ import { ProjectsSection } from "@/app/components/projects-section"
 import SkillsSection  from "@/app/components/skills"
 import { ContactSection } from "./components/contact-section"
 import AboutSection from "./components/about-section"
+import ResumeChatbot from "./components/ResumeChatbot"
+
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true)
 
@@ -30,6 +32,8 @@ export default function Home() {
       <SkillsSection />
       
       <ContactSection />
+      <ResumeChatbot />
+
     </main>
       </div>
     </>

@@ -16,8 +16,7 @@ useEffect(() => {
 
 const leetcode = stats?.leetcode
 const codeforces = stats?.codeforces
-const codechef = stats?.codechef
-const gfg = stats?.geeksforgeeks
+
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
