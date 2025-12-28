@@ -8,7 +8,7 @@ const projects = [
     subtitle: "NGO Management Platform",
     description:
       "A comprehensive full-stack website with admin controls, volunteer management, and donation tracking using modern web technologies.",
-    image: "Screenshot 2025-08-19 183709.png",
+    image: "Screenshot 2025-08-19 183709.webp",
     tech: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
     liveUrl: "https://hc-opage.vercel.app/", // Added site link
     githubUrl: "https://github.com/ADIII-03/HCOpage", // Added GitHub link
@@ -19,7 +19,7 @@ const projects = [
     subtitle: "Women's Safety Platform",
     description:
       "A full-stack web application empowering women's safety through NGO creation, volunteer coordination, and donation management with real-time features.",
-    image: "Screenshot 2025-08-19 183925.png",
+    image: "Screenshot 2025-08-19 183925.webp",
     tech: ["React", "Node.js", "Cloudinary", "Mailtrap", "Nodemailer", "Mapbox", "DaisyUI", "Socket.io"],
     liveUrl: "https://sangam-frontend-rust.vercel.app/", // Added site link
     githubUrl: "https://github.com/ADIII-03/sangam-frontend", // Added GitHub link
@@ -30,12 +30,24 @@ const projects = [
     subtitle: "Multilingual Chat Application",
     description:
       "An innovative real-time chat application that connects users globally with complementary language preferences for seamless multilingual communication.",
-    image: "/Screenshot 2025-08-19 183757.png",
+    image: "/Screenshot 2025-08-19 183757.webp",
     tech: ["React", "Stream", "Node.js", "MongoDB", "DaisyUI"],
     liveUrl: "https://chatrraverse-frontend-git-main-aditya-ramans-projects.vercel.app/login", // Added site link
     githubUrl: "https://github.com/ADIII-03/Chatrraverse-frontend", // Added GitHub link
     featured: false,
   },
+  {
+  title: "ARGO FLOAT – Smart Ocean Monitoring System",
+  subtitle: "Smart India Hackathon (SIH) Project",
+  description:
+    "A smart oceanographic data collection system using Argo float technology to monitor temperature, salinity, and ocean currents in real time, aiding climate research and marine analysis.",
+  image: "/argo-float.webp", 
+  tech: ["IoT", "Python", "Node.js", "MongoDB", "React", "Cloud"],
+  liveUrl: "https://sih-project-omega.vercel.app/", // optional
+  githubUrl: "https://github.com/ADIII-03/sihProject", // if public
+  featured: true, // optional
+}
+
 ]
 
 export function ProjectsSection() {

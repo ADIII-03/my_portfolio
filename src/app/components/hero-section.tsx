@@ -151,7 +151,7 @@ export function HeroSection() {
         <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full mb-8 fade-in-up">
           <div className="absolute inset-0 rounded-full neon-border animate-pulse"></div>
           <div className="absolute inset-2 rounded-full overflow-hidden border-2 border-secondary/50">
-            <Image src="/your-photo.jpg" alt="Aditya Raman" fill className="object-cover rounded-full" />
+            <Image src="/your-photo.webp" alt="Aditya Raman" fill className="object-cover rounded-full" />
           </div>
           <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 blur-xl animate-pulse"></div>
         </div>

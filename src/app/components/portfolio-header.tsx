@@ -52,7 +52,7 @@ export function PortfolioHeader() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             <div className="flex items-center space-x-3 lg:space-x-4 animate-slide-in-left">
               <div className="relative w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden ring-2 ring-primary/20 hover:ring-primary/40 transition-all duration-300">
-                <Image src="/your-photo.jpg" alt="Aditya Raman" fill className="object-cover" />
+                <Image src="/your-photo.webp" alt="Aditya Raman" fill className="object-cover" />
               </div>
               <div className="flex flex-col">
                 <span className="text-lg sm:text-xl lg:text-2xl font-bold font-serif  bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x">
