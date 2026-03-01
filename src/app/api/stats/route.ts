@@ -17,18 +17,39 @@ async function fetchSafe(url: string) {
   }
 }
 
+async function fetchCodeforces() {
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), 5000)
+
+  try {
+    const res = await fetch(
+      "https://codeforces.com/api/user.info?handles=Aditya0318",
+      {
+        signal: controller.signal,
+        cache: "no-store",
+        headers: {
+          "User-Agent": "Mozilla/5.0",
+          "Accept": "application/json",
+        },
+      }
+    )
+
+    const data = await res.json()
+    return data.status === "OK" ? data.result[0] : null
+  } catch (err) {
+    return null
+  } finally {
+    clearTimeout(timeout)
+  }
+}
+
 export async function GET() {
   const leetcode = await fetchSafe(`${baseUrl}/api/leetcode`)
-
-  const codeforcesData = await fetchSafe(
-    "https://codeforces.com/api/user.info?handles=Aditya0318"
-  )
+  const codeforces = await fetchCodeforces()
 
   return NextResponse.json({
     leetcode: leetcode ?? { error: "LeetCode unavailable" },
-    codeforces: codeforcesData?.result?.[0] ?? {
-      error: "Codeforces unavailable",
-    },
+    codeforces: codeforces ?? { error: "Codeforces unavailable" },
     codechef: {
       username: "adi_0518",
       rating: 1418,
